@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizOne", "QuizOne\QuizOne.csproj", "{D29CAF6D-4C8F-4F97-9747-8E47060D1BE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizOneCorrected", "QuizOneCorrected\QuizOneCorrected.csproj", "{7C298884-709E-47A4-8A86-A21ED976556F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D29CAF6D-4C8F-4F97-9747-8E47060D1BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29CAF6D-4C8F-4F97-9747-8E47060D1BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29CAF6D-4C8F-4F97-9747-8E47060D1BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29CAF6D-4C8F-4F97-9747-8E47060D1BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C298884-709E-47A4-8A86-A21ED976556F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C298884-709E-47A4-8A86-A21ED976556F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C298884-709E-47A4-8A86-A21ED976556F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C298884-709E-47A4-8A86-A21ED976556F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF92DB75-015B-4200-8339-0A66604BFFF0}
+	EndGlobalSection
+EndGlobal

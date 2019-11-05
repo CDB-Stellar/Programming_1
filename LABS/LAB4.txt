@@ -1,0 +1,274 @@
+LAB4Questions
+Chloe Baker - 301062067
+
+1. 
+a) 5 > 2 [= true]		h) 4 % 2 * 5 [= 0]
+b) 5 != 2 [= true]		i) 2 % 4 * 5 [= 10]
+c) 6 % 2 == 4 % 2 [= true]	j) true || false [= true]
+d) 5 * 4 != 6 * 2 [= true]	k) 7 > 3 && 5 < 2 [= false]
+e) 6 * 2 == 4 * 3 [= true]	l) 5 * 4 < 20 || false [= false]
+f) 5 * 2 [= 10]			m) 2 + 3 > 1 * 4 && 5 / 5 == 1 [= true]
+g) 5 % 2 * 4 [= 4]
+
+2.
+a) 5 == 5 [= true]		e) 5 == 5 || 4 == 2 [= true]
+b) 2 * 5 == 4 * 5 [= false]	f) 5 == 5 && 4 != 2 [= true]
+c) 2 == 5 || 5 == 4 [= false]	g) 5 % 2 * 4 > 5 || 4 % 2 * 5 < 7 [= true]
+d) 5 == 5 || 4 != 2 [= true]
+
+3.
+a) ((5 % 2) * 4) == ((4 % 2) * 5) [= false]
+b) 5 % 2 * 4 > 4 % 2 * 5 [= true]
+c) 2 % 4 * 5 >= 4 % 5 * 2 [= false]
+d) 2 % 4 * 5 != 5 % 4 * 2 [= false]
+
+4.
+a) age == 30
+b) temperature > 98.6
+c) height < 6
+d) month == 12
+e) letter == 'm'
+f) age == 30 && personHeight > 6
+g) day == 15 && month == 1
+h) age > 50 || employed >= 5
+i) idNumber < 500 && age > 55
+j) length > 2 && length < 3
+k) age >= 30 && <= 40
+l) age < 30 || age > 50
+m) key.ToUpper() == "R"
+n) province == 'O' && taxable == 'Y'
+o) age >= 17 && residence == 'Y'
+p) position == "Manager" || position == "Supervisor"
+
+5.
+a) 
+if (angle == 90)
+{
+   Console.WriteLine("The angle is a right angle");
+}
+else
+{
+   Console.WriteLine("The angle is not a right angle");
+}
+
+b)
+if (temp > 100)
+{
+   Console.WriteLine("above the boiling point of water");
+}
+else
+{
+   Console.WriteLine("below the boiling point of water");
+}
+
+c)
+if (score < 70)
+{
+   Console.WriteLine("fail");
+}
+else
+{
+   Console.WriteLine("pass");
+}
+
+d)
+if (temp >= 98.2 && temp <= 100.2)
+{
+   Console.WriteLine("normal");
+}
+else
+{
+   Console.WriteLine("not normal");
+}
+
+e)
+if (number > 0)
+{
+   positiveSum = positiveSum + number;
+}
+else
+{
+   positiveSum = negativeSum + number;
+}
+
+f)
+if (slope < 0.5)
+{
+   flag = 0;
+}
+else
+{
+   flag = 1;
+}
+
+g)
+if (temp1 - temp2 < 0.001)
+{
+   approx = 0;
+}
+else
+{
+   approx = (num1 - num2) / 2;
+}
+
+h)
+if (temp1 - temp2 > 2.3)
+{
+   error = (temp1 - temp2) * factor;
+}
+
+i)
+if (x > y && z < 20)
+{
+   p = Convert.ToInt32(Console.ReadLine());
+}
+
+j)
+if (distance > 20 && distance < 35)
+{
+   time = Convert.ToInt32(Console.ReadLine());
+}
+
+k)
+if (hours < 40)
+{
+   wages = 8 * hours
+}
+else
+{
+   wages = (320 + (hours - 40)) * 12
+}
+
+l)
+if (shape == "R")
+{
+   area = 4 * length;
+}
+else if (shape == "C")
+{
+   area = PI * length * length;
+}
+else if (shape == "T")
+{
+   area = 0.433 * length * length;
+}
+
+6. a)
+int numberOfYears;
+
+Console.WriteLine("Please enter the number of years the money has been in the bank.");
+numberOfYears = Convert.ToInt32(Console.ReadLine());
+
+if (numberOfYears > 5)
+{
+   Console.WriteLine("The interest is 7.5%.");
+}
+else
+{
+   Console.WriteLine("The interest is 5.4%.");
+}
+
+b) 
+Run 1: input 2 years, expect the program to output "The interest is 5.4%."
+Run 2: input 6 years, expect the program to output "The interest is 7.5%."
+
+7. a)
+double grade;
+
+Console.WriteLine("Please enter the grade.");
+grade = Convert.ToDouble(Console.ReadLine());
+
+if (grade >= 70)
+{
+   Console.WriteLine("A passing grade");
+}
+else
+{
+   Console.WriteLine("A failing grade");
+}
+
+b)
+Run 1: input 30, expect program to output "A failing grade"
+Run 2: input 70, expect program to output "A passing grade"
+Run 3: input 80, expect program to output "A passing grade"
+
+8. a)
+double hoursWorked;
+double pay;
+
+Console.WriteLine("Please enter how many hours you've worked:");
+hoursWorked = Convert.ToDouble(Console.ReadLine());
+
+if (hoursWorked <= 40)
+{
+   pay = hoursWorked * 8;
+   Console.WriteLine($"Your pay for {hoursWorked} is {pay:c}");
+}
+else
+{
+   pay = 320 + (12 * (hoursWorked - 40));
+   Console.WriteLine($"Your pay for {hoursWorked} is {pay:c}");
+}
+
+b)
+Run 1: input 30, expect program to output $240.00
+Run 2: input 45, expect program to output $380.00
+
+9. a)
+char status;
+
+Console.WriteLine("Please enter your status:");
+status = Convert.ToChar(Console.ReadLine());
+
+if (status == 'S')
+{
+   Console.WriteLine("Senior salespersons get $400 per week.");
+}
+else
+{
+   Console.WriteLine("Junior salespersons get $275 per week.");
+}
+
+b)
+Run 1: input S, expect program to output "Senior salespersons get $400 per week."
+Run 2: input J, expect program to output "Junior salespersons get $275 per week."
+
+10. a)
+string userInput;
+
+Console.WriteLine("Enter a letter:");
+userInput = Console.ReadLine();
+
+if (userInput == "u")
+{
+   Console.WriteLine("I feel great today!");
+}
+else
+{
+   Console.WriteLine("I feel down today #$*!");
+}
+
+b)
+Run 1: input u, expect program to output "I feel great today!"
+Run 2: input bhg, expect program to output "I feel down today #$*!"
+
+11. a)
+int month;
+int day;
+
+Console.WriteLine("Enter a month (use a 1 for Jan, etc.):");
+month = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter a day of the month:");
+day = Convert.ToInt32(Console.ReadLine());
+
+if (month < 1 || month > 12)
+{
+   Console.WriteLine("An invalid month has been entered.");
+}
+else if (day < 1 || day > 31)
+{
+   Console.WriteLine("An invalid day has been entered.");
+}
+
+b)
+Because the program converts the number entered into an integer the number will always be an integer.
