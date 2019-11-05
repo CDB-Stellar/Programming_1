@@ -1,0 +1,180 @@
+_____________________________________________________________________________
+---Camel Casing & Pascal Casing for Naming Identifiers ---
+
+Camel casing is when the first word is lowercase and the rest of the words are Capitalized. 
+
+	Ex.
+	countOverFifty 
+
+	*- Camel casing is always used for local variables. -*
+
+Pascal casing is when every word is capitalized.
+
+	Ex.
+	CountOverFifty
+
+	*- Pascal casing is always used for methods. -*
+
+_____________________________________________________________________________
+---Creating Identifiers---
+
+- Identifiers can start with an underscore, @, or a letter. 
+- Identifiers can only contain letters, digits, underscores, and @.
+
+_____________________________________________________________________________
+---Characters and Strings---
+
+- Characters are denoted by ' ' and can only contain one character.
+- Strings are denoted by " " and can contain many characters.
+
+	Ex.
+	'a'	 - character
+	"abdefg"	 - string
+	'9'	- character
+
+_____________________________________________________________________________
+---Literal Constants---
+
+Literal constants are values that do not ever change. They could be a variable or in an expression.
+	Ex.
+	int aNumber = 1;		- 1 is the literal constant
+
+	Ex. 
+	Console.WriteLine(6 + 5);	- 6 and 5 are literal constants
+	
+	*- You shouldn't have literal constants in your code (magic numbers), instead make 
+	them named constants. -*
+
+Conventions:
+a = 1	- assumed int because there is no decimal
+a = 1.1	- assumed double because there is a decimal
+
+???
+a = 1M
+{value: C}	- to format an int when you display it
+???
+
+_____________________________________________________________________________
+---Escape Sequence Characters---
+
+Putting a \ before a character will change the meaning of that character. 
+
+\'	- a single quote
+'\n'	- new line
+'\t'	- tab
+
+	Ex. 
+	Console.WriteLine("Some writing \' and some more writing.");
+	output:
+		Some writing ' and some more writing.
+
+	Ex.
+	Console.WriteLine("Some writing \nand some more writing.");
+	output:
+		Some writing
+		and some more writing.
+
+	Ex.
+	Console.WriteLine("1\' 2\"");
+	output:
+		1'2"
+
+_____________________________________________________________________________
+---Comparing Characters Using Boolean Operators---
+
+Each character is represented by unicode. When comparing characters, it compares each character's unicode.
+
+- Whatever letter has a lesser unicode value is considered less than a character with a higher unicode value.
+- When comparing strings, two strings would be considered equal if every single character is the same in both strings. 
+
+	Ex.
+	'a' < 'A' = true 	- because lower case unicode comes before upper case
+
+Placeholders (are a nightmare, use string interpolation instead)
+
+_____________________________________________________________________________
+---Displaying Formatted Strings---
+
+Putting $ before the "" of a string is called string interpolation, and it lets you put variables into a string or format the look of the string's output using {}.
+
+	Ex.
+	int aNumber = 25;
+	Console.WriteLine($"Here is a number: {aNumber}");
+	output:
+		Here is a number: 25
+
+- You can use a second argument in {} to format how the output is displyed.
+
+	Ex.
+	string name1 = "Greg";
+            	string name2 = "Judy";
+            	string name3 = "Bob";
+
+           	Console.WriteLine($"{name1, 15}");
+            	Console.WriteLine($"{name2, 15}");
+            	Console.WriteLine($"{name3, 15}");
+	output:
+
+- You can use :c to format a number to appear as currency.
+
+	Ex.
+	int someMoney = 5;
+	Console.WriteLine($"This will look like money, {someMoney:c}");
+	output:
+		This will look like money, $5.00
+
+_____________________________________________________________________________
+---Named Constants---
+
+- Named constants do not use camel or pascal casing, instead every letter is capitalized and underscores are used to separate words for readability.
+- Named constants replace magic numbers.
+- You will not be able to change the value of this variable throughout your program.
+
+	Ex.
+	const double KILOS_IN_POUNDS = 0.56975;
+
+_____________________________________________________________________________
+October 1, 2019
+
+---Conditionals (if else statements)---
+
+Everything in an "if statement" is only done if the "if statement" is true, otherwise nothing happens.
+
+	Ex. 
+	if (this is where you put a logical expression that gives a boolean true or false) 
+	{
+		everything you put between the curly brackets is what happens if the if is true;
+	}
+
+Everything in an "else" happens anytime an "if statement" is false.
+
+	Ex. 
+	if (aVariable < 10) 
+	{
+		if aVariable < 10 = true, everything between the curly brackets is done;
+	}
+	else
+	{
+		if aVariable < 10 = false, everything between these curly brackets is done;
+	}
+
+_____________________________________________________________________________
+---Logical Operators---
+
+Logical operators return a value of either true or false. They can be binary or unary.
+
+- Binary logical operators are true if either one of the two arguments is true.
+- Unary logical operators have only one argument that is true or false.
+
+Binary:
+==	- is equal to
+!=	- is not equal to
+<=	- is less than or equal to
+>=	- is greater than or equal to
+&& 	- and
+|| 	- or
+>	- is greater than
+<	- is less than
+
+Unary:
+!  	- not
