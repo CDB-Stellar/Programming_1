@@ -30,7 +30,7 @@ namespace LAB8_10
             const double INTEREST = 0.08;
             double bankAccountTotal = 1000;
 
-            Console.WriteLine("Year     Balance");
+            Console.WriteLine($"{"Year",-9}Balance");
 
             for (int year = 1; year <= YEAR_PERIOD; ++year)
             {
