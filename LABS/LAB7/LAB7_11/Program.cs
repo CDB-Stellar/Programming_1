@@ -27,20 +27,19 @@ namespace LAB7_11
              *  7               4000                  0                28000       */
 
             const int DEPRECIATION_RATE = 4000;
-            int counter = 1;
-            int endYearValue = 24000;
+            int endYearValue = 28000;
             int accumulatedDepreciation = 4000;
 
             Console.WriteLine("                                 END-OF-YEAR          ACCUMULATED");
             Console.WriteLine("YEAR         DEPRECIATION           VALUE            DEPRECIATION");
             Console.WriteLine("----         ------------         ------------       ------------");
-            do
+
+            for (int counter = 1; counter <= 7; ++counter)
             {
-                Console.WriteLine($" {counter,-16}{DEPRECIATION_RATE,-18}{endYearValue,5}                {accumulatedDepreciation,5}");
                 endYearValue -= DEPRECIATION_RATE;
+                Console.WriteLine($" {counter,-4}{"",12}{DEPRECIATION_RATE,-8}{"",9}{endYearValue,6}{"",9}{accumulatedDepreciation,12}");
                 accumulatedDepreciation += DEPRECIATION_RATE;
-                counter++;
-            } while (counter <= 7);
+            }
         }
     }
 }

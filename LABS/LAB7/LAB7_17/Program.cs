@@ -10,12 +10,12 @@ namespace LAB7_17
     {
         static void Main(string[] args)
         {
-            //Chloe Baker - 301062067 - November 1, 2019
+            //Chloe Baker - 301062067 - November 8, 2019
 
             /* Write programs to output the following patterns. You must not hard-code the 
-             * size of the figure. You should be able to output different sizes by changing 
-<<<<<<< HEAD
-             * the value of one or two variables. (max rows - row number = number of spaces)
+             * size of the figure. You should be able to output different sizes by changing
+             * the value of one or two variables. 
+             * (max rows - row number = number of blank spaces)
              * 1        *
              * 2       ***
              * 3      *****
@@ -26,69 +26,25 @@ namespace LAB7_17
              * 8 *************** */
 
             const int MAX_ROWS = 8;
-            int rowNumber = 1;
-
-            for (int rowCount = 0; rowCount < MAX_ROWS; ++rowCount)
-            {
-                
-            }
-
-            //const int TRIANGLE_BASE = 15;
-            //string blankSpace = "";
-            //int blankStringLength = (TRIANGLE_BASE - 1)/2;
-            //string stars = "*";
-            //int rowSize = 1;
-
-            ////Initializing amount of blank space
-            //while (blankSpace.Length < blankStringLength)
-            //{
-            //    blankSpace += " ";
-            //}
-
-            //while (rowSize <= TRIANGLE_BASE)
-            //{
-            //    Console.Write($"{blankSpace}{stars}");
-            //    Console.WriteLine();
-            //    stars += "**";
-            //    --blankStringLength;
-            //    blankSpace = blankSpace.Substring(0, blankStringLength);
-
-            //    ++rowSize;
-            //}
-=======
-             * the value of one or two variables.
-             *        *
-             *       ***
-             *      *****
-             *     *******
-             *    ********* 
-             *   *********** 
-             *  *************
-             * *************** */
-
-            const int TRIANGLE_BASE = 15;
             string blankSpace = "";
-            int blankStringLength = (TRIANGLE_BASE - 1)/2;
-            string stars = "*";
-            int rowSize = 1;
 
-            //Initializing amount of blank space
-            while (blankSpace.Length < blankStringLength)
+            for (int rowCount = 1; rowCount <= MAX_ROWS; ++rowCount)
             {
-                blankSpace += " ";
-            }
+                for (int count = 0; count < (MAX_ROWS - rowCount); ++count)
+                {
+                    blankSpace += " ";
+                }
 
-            while (rowSize <= TRIANGLE_BASE)
-            {
-                Console.Write($"{blankSpace}{stars}{blankSpace}");
+                Console.Write(blankSpace);
+
+                for (int colCount = 0; colCount < rowCount * 2 - 1; ++colCount)
+                {
+                    Console.Write("*");
+                }
+
                 Console.WriteLine();
-                stars += "**";
-                --blankStringLength;
-                blankSpace = blankSpace.Substring(0, blankStringLength);
-
-                ++rowSize;
+                blankSpace = "";
             }
->>>>>>> master
         }
     }
 }
