@@ -14,6 +14,7 @@ namespace LAB7_17
 
             /* Write programs to output the following patterns. You must not hard-code the 
              * size of the figure. You should be able to output different sizes by changing 
+<<<<<<< HEAD
              * the value of one or two variables. (max rows - row number = number of spaces)
              * 1        *
              * 2       ***
@@ -54,6 +55,40 @@ namespace LAB7_17
 
             //    ++rowSize;
             //}
+=======
+             * the value of one or two variables.
+             *        *
+             *       ***
+             *      *****
+             *     *******
+             *    ********* 
+             *   *********** 
+             *  *************
+             * *************** */
+
+            const int TRIANGLE_BASE = 15;
+            string blankSpace = "";
+            int blankStringLength = (TRIANGLE_BASE - 1)/2;
+            string stars = "*";
+            int rowSize = 1;
+
+            //Initializing amount of blank space
+            while (blankSpace.Length < blankStringLength)
+            {
+                blankSpace += " ";
+            }
+
+            while (rowSize <= TRIANGLE_BASE)
+            {
+                Console.Write($"{blankSpace}{stars}{blankSpace}");
+                Console.WriteLine();
+                stars += "**";
+                --blankStringLength;
+                blankSpace = blankSpace.Substring(0, blankStringLength);
+
+                ++rowSize;
+            }
+>>>>>>> master
         }
     }
 }
