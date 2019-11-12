@@ -19,24 +19,29 @@ namespace LAB8_14
              * c) Modify the program written for LAB8_13 to initially prompt for the amount of money initially deposited, 
              * the interest rate to be used, and the number of years to be displayed. */
 
-            const int STARTING_AMOUNT = 1000;
-            double bankTotal = STARTING_AMOUNT;
+            const int AMOUNT_DEPOSITED_YEARLY = 1000;
+            double startingAmount;
+            int years;
+            double interestRate;
+            
+            Console.Write("Enter the initial amount of money in the account: $");
+            startingAmount = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter how many years to show: ");
+            years = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the interest rate: ");
+            interestRate = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine($"{"",-8}{"Interest",-10}{"Account",-20}");
+            double bankTotal = startingAmount;
+
+            Console.WriteLine($"\n{"",-8}{"Interest",-10}{"Account",-20}");
             Console.WriteLine($"{"Year",-8}{"Rate (%)",-10}{"Total",-20}");
             Console.WriteLine("________________________________");
 
-            for (double interestRates = 6; interestRates <= 12; ++interestRates)
+            for (int count = 1; count <= years; ++count)
             {
-                for (int years = 1; years <= 10; ++years)
-                {
-                    bankTotal += (interestRates / 10) * bankTotal;
-                    Console.WriteLine($"{years,-8}{interestRates,-10}{bankTotal,-20:c}");
-                    bankTotal += STARTING_AMOUNT;
-                }
-                bankTotal = STARTING_AMOUNT;
-
-                Console.WriteLine("________________________________");
+                bankTotal += (interestRate / 10) * bankTotal;
+                Console.WriteLine($"{count,-8}{interestRate,-10}{bankTotal,-20:c}");
+                bankTotal += AMOUNT_DEPOSITED_YEARLY;
             }
         }
     }
