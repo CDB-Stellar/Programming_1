@@ -178,3 +178,27 @@ Binary:
 
 Unary:
 !  	- not
+
+
+
+
+
+
+
+
+int[2,3] x; // is how to declare a rectangluar array
+
+
+
+int[][] x; // is how you declare a jagged array
+
+// visualization of jagged array
+x [ ] --> [ ] -->[ | | | ]
+	  [ ] -->[ | | ]
+	  [ ] -->[ | | | | ]
+
+x = new int [][4];
+x[0] = new int[3];
+x[1] = new int[5];
+
+x[2][2] = 5
