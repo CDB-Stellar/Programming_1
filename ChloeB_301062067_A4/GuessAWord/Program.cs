@@ -23,21 +23,22 @@ namespace GuessAWord
 
             string[] words = new string[8] {"below", "heart", "snowing", "balloon", "canine", "trudge", "precarious", "amazing"};
             char userGuess;
-            string hiddenWord = "";
             Random ranNumGenerator = new Random();
             int randomNum;
             randomNum = ranNumGenerator.Next(0, words.Length - 1);
             string randomWord = words[randomNum];
+            string[] hiddenWord = new string[randomWord.Length];
 
             // Initializing hiddenWord as all asterisks
             for (int x = 0; x < randomWord.Length; ++x)
             {
-                hiddenWord += "*";
+                hiddenWord[x] = "*";
             }
+            Console.WriteLine($"Word: {hiddenWord}");
 
             while (hiddenWord != randomWord)
             {
-                Console.WriteLine($"Word: {hiddenWord}");
+                hiddenWord = "";
                 Console.WriteLine($"Guess a letter >> ");
                 userGuess = Convert.ToChar(Console.ReadLine());
 
@@ -45,18 +46,13 @@ namespace GuessAWord
                 {
                     if (userGuess == randomWord[i])
                     {
-                        hiddenWord += userGuess;
-                    }
-
-                    else
-                    {
-                        hiddenWord += "*";
+                        hiddenWord = userGuess;
                     }
                 }
-                hiddenWord = "";
+                Console.WriteLine($"Word: {hiddenWord}");
             }
 
-            // This is definitely not right
+            // lots of loops and writelines
         }
     }
 }

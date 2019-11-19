@@ -12,16 +12,19 @@ namespace LAB9_06
         {
             // Chloe Baker - 301062067 - November 18, 2019
 
-            /* Write a console app that ask user to input the phrase. Create and then display array 
-             * that will contain the numbers of each letter in alphabet in the phrase. The letter 
-             * frequencies are displayed from highest to lowest. */
+            /* Write a console app that ask user to input the phrase. Create and then display array that 
+             * will contain the numbers of each letter in alphabet in the phrase. The letter frequencies 
+             * are displayed from highest to lowest. (Use parrallel arrays, and write your own sort) */
 
-            int[][] numberOfLetters = new int[26][];
+            int[] numberOfLetters = new int[26];
+            int[] letters = new int[26];
             string phrase;
+            int temporary;
+            bool done = false;
 
-            for (int i = 0; i < numberOfLetters.Length; ++i)
+            for (int i = 0; i < letters.Length; ++i)
             {
-                numberOfLetters[i] = new int[(char)('a' + i)];
+                letters[i] = (char)('a' + i);
             }
 
             Console.WriteLine("Please enter any phrase below:");
@@ -29,25 +32,37 @@ namespace LAB9_06
 
             Console.WriteLine("\nHere are the number of letters in that phrase:");
 
-            for (int i = 0; i < numberOfLetters.Length; ++i)
+            for (int i = 0; i < letters.Length; ++i)
             {
                 for (int x = 0; x < phrase.Length; ++x)
                 {
-                    if (phrase[x] == (char)('a' + i))
+                    if (phrase[x] == letters[i])
                     {
-                        ++numberOfLetters[i][0];
+                        ++numberOfLetters[i];
+
                     }
                 }
-                //Array.Sort(numberOfLetters[i]);
-                Console.Write($"\n'{(char)('a' + i)}'s: {numberOfLetters[i][0]}");
+                Console.Write($"\n'{(char)letters[i]}'s: {numberOfLetters[i]}");
             }
             Console.WriteLine();
 
-            // flip the letters and values?
+            // Sorting
+            while (done == false)
+            {
+                for (int i = 0; i < numberOfLetters.Length; ++i)
+                {
+                    if (numberOfLetters[i] < numberOfLetters[0])
+                    {
+                        done = true;
+                    }
+                }
+            }
+
+            // you have to write your own sort
 
 
 
-
+            // first part of the problem
             //int[] letters = new int[26];
             //int[] numberOfLetters = new int[26];
             //string phrase;
