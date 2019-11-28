@@ -42,50 +42,33 @@ namespace LAB9_06
 
                     }
                 }
-                Console.Write($"\n'{(char)letters[i]}'s: {numberOfLetters[i]}");
             }
-            Console.WriteLine();
 
             // Sorting
-            while (done == false)
+            for (int x = numberOfLetters.Length - 1; x > 0; --x)
             {
                 for (int i = 0; i < numberOfLetters.Length; ++i)
                 {
-                    if (numberOfLetters[i] < numberOfLetters[0])
+                    if (numberOfLetters[0] < numberOfLetters[i])
                     {
-                        done = true;
+                        temporary = numberOfLetters[i];
+                        numberOfLetters[i] = numberOfLetters[0];
+                        numberOfLetters[0] = temporary;
+
+                        temporary = letters[i];
+                        letters[i] = letters[0];
+                        letters[0] = temporary;
                     }
                 }
             }
 
-            // you have to write your own sort
+            // Printing
+            for (int i = 0; i < letters.Length; ++i)
+            {
+                Console.Write($"\n'{(char)letters[i]}'s: {numberOfLetters[i]}");
+            }
 
-
-
-            // first part of the problem
-            //int[] letters = new int[26];
-            //int[] numberOfLetters = new int[26];
-            //string phrase;
-
-            //Console.WriteLine("Please enter any phrase below:");
-            //phrase = Console.ReadLine();
-
-            //Console.WriteLine("\nHere are the number of letters in that phrase:");
-
-            //for (int i = 0; i < numberOfLetters.Length; ++i)
-            //{
-            //    letters[i] = 'a' + i;
-
-            //    for (int x = 0; x < phrase.Length; ++x)
-            //    {
-            //        if (phrase[x] == letters[i])
-            //        {
-            //            ++numberOfLetters[i];
-            //        }
-            //    }
-            //    Console.Write($"\n'{(char)letters[i]}'s: {numberOfLetters[i]}");
-            //}
-            //Console.WriteLine();
+            // note done, doesnt sort enough times?
         }
     }
 }
