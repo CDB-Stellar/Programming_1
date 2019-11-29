@@ -12,7 +12,8 @@ namespace LAB12_01
         {
             // Chloe Baker - 301062067 - November 29, 2019
 
-            /* Write a method called DisplayPersonalInfo() to display your name, school, program and your 
+            /* [Part 1: Question 1]
+             * 1. Write a method called DisplayPersonalInfo() to display your name, school, program and your 
              * favorite course. Call this method from main. */
 
             DisplayPersonalInfo();

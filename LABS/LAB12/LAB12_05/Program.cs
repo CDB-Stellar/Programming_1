@@ -12,7 +12,8 @@ namespace LAB12_05
         {
             // Chloe Baker - 301062067 - November 29, 2019
 
-            /* Write a method called CalculateSaleCommission(), that prompts the user for his sales figure, and 
+            /* [Part 1: Question 5]
+             * Write a method called CalculateSaleCommission(), that prompts the user for his sales figure, and 
              * then calculates and displays his commission. 
              * (commission = 25% of sales in excess of 1000. If sales is below $1000.00 there is no commission) */
 

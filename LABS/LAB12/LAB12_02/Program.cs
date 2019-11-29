@@ -12,7 +12,8 @@ namespace LAB12_02
         {
             // Chloe Baker - 301062067 - November 29, 2019
 
-            /* write a method called CalculateTuition(), that prompts the user for the number of courses 
+            /* [Part 1: Question 2]
+             * write a method called CalculateTuition(), that prompts the user for the number of courses 
              * and then calculates and displays the tuition cost. (cost = number of course * 569.99). Call 
              * this method from main. */
 

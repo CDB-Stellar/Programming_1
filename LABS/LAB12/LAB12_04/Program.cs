@@ -12,7 +12,8 @@ namespace LAB12_04
         {
             // Chloe Baker - 301062067 - November 29, 2019
 
-            /* Write a method called CalculateAreaOfTriangle(), that prompts the user for the base and height 
+            /* [Part 1: Question 4]
+             * Write a method called CalculateAreaOfTriangle(), that prompts the user for the base and height 
              * of a triangle and then calculates and displays the area [A=bt/2]. Call this method from main. */
 
             CalculateAreaOfTriangle();

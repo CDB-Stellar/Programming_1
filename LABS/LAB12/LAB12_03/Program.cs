@@ -12,7 +12,8 @@ namespace LAB12_03
         {
             // Chloe Baker - 301062067 - November 29, 2019
 
-            /* Write a method called CalculateAreaOfCircle(), that prompts the user for the radius 
+            /* [Part 1: Question 3]
+             * Write a method called CalculateAreaOfCircle(), that prompts the user for the radius 
              * of a circle and then calculates and displays the area [A = πr^2]. Call this method from main. */
 
             CalculateAreaOfCircle();
