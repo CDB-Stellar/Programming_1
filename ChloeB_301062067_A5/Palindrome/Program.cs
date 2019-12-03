@@ -22,7 +22,7 @@ namespace Palindrome
              * returns true if the provided argument is a palindrome. */
 
             char[] comparisonNumbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-            string[] palindromes = { "Initializer" };
+            string[] palindromes = new string[100];
             string userInput;
 
             do
@@ -66,8 +66,14 @@ namespace Palindrome
 
         static void AddInputToArray(ref string[] palindromes, string userInput)
         {
-            Array.Resize(ref palindromes, palindromes.Length + 1); // change this
-            palindromes[palindromes.Length - 1] = userInput;
+            for (int i = 0; i < palindromes.Length; ++i)
+            {
+                if (palindromes[i] == null)
+                {
+                    palindromes[i] = userInput;
+                    return;
+                }
+            }
         }
 
         static bool IsNumberPalindrome(char[] comparisonNumbers, string characters)
@@ -99,11 +105,9 @@ namespace Palindrome
             {
                 Console.WriteLine("\n-------------------------------------------");
                 Console.WriteLine("Here are all the palindromes you entered: ");
-                for (int i = 1; i < palindromes.Length; ++i)
+                for (int i = 0; i < palindromes.Length; ++i)
                 {
-                    if (i != palindromes.Length - 1)
-                        Console.Write($"{palindromes[i]}, ");
-                    else
+                    if (palindromes[i] != null)
                         Console.WriteLine(palindromes[i]);
                 }
             }
