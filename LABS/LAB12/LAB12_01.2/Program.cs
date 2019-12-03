@@ -10,25 +10,25 @@ namespace LAB12_01._2
     {
         static void Main(string[] args)
         {
-            // Chloe Baker - 301062067 - November 30, 2019
+            // Chloe Baker - 301062067 - November 29, 2019
 
-            /* [Part 2: Question 1] 
-             * Write a method called DisplayHorizontalStars(int numberOfStars). This method will output the number of 
-             * stars horizontally specified by its argument. Call the DisplayHorizontalStars() method three times 
-             * from Main(), supplying 0, 5 and 10 number of stars. */
+            /* [Part 1: Question 2]
+             * write a method called CalculateTuition(), that prompts the user for the number of courses 
+             * and then calculates and displays the tuition cost. (cost = number of course * 569.99). Call 
+             * this method from main. */
 
-            DisplayHorizontalStars(0);
-            DisplayHorizontalStars(5);
-            DisplayHorizontalStars(10);
+            CalculateTuition();
         }
 
-        static void DisplayHorizontalStars(int numberOfStars)
+        static void CalculateTuition()
         {
-            for (int i = 0; i < numberOfStars; ++i)
-            {
-                Console.Write("*");
-            }
-            Console.WriteLine();
+            int numberOfCourses;
+            double tuitionCost;
+
+            Console.Write("Please enter the number of courses you're taking: ");
+            numberOfCourses = Convert.ToInt32(Console.ReadLine());
+            tuitionCost = numberOfCourses * 569.99;
+            Console.WriteLine($"The tuition cost is: {tuitionCost:c}");
         }
     }
 }

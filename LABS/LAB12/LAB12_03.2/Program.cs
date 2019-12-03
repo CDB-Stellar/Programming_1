@@ -10,24 +10,19 @@ namespace LAB12_03._2
     {
         static void Main(string[] args)
         {
-            // Chloe Baker - 301062067 - November 30, 2019
+            // Chloe Baker - 301062067 - December 2, 2019
 
-            /* [Part 2: Question 3] 
-             * Write a method that accepts an argument of type double. The method will calculate and display the 
-             * volume of a sphere with radius specified by its argument. [V=43πr3]. Call this method from Main with 
-             * arguments 1, 2, and 10. The answers are 4.1887, 33.5103 and 4188.7902 respectively.
-             * (Use Math.PI for the value of π) */
+            /* [Part 3: Question 2] 
+             * Write a method called CalculatePower(double current, double resistance). The method will
+             * calculate and return the electrical power dissipated in a circuit [P=I^2R]. */
 
-            VolumeOfSphere(1);
-            VolumeOfSphere(2);
-            VolumeOfSphere(10);
+            Console.WriteLine($"{CalculatePower(5f,10f)}");
         }
 
-        static void VolumeOfSphere(double radius)
+        static double CalculatePower(double current, double resistance)
         {
-            double volume = ((4 / 3) * Math.PI) * (radius * radius * radius);
-
-            Console.WriteLine($"The volume is: {volume:f4}");
+            double power = (current * current) * resistance;
+            return power;
         }
     }
 }
