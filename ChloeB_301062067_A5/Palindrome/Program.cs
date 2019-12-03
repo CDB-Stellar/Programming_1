@@ -23,13 +23,6 @@ namespace Palindrome
 
             char[] comparisonNumbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             string[] palindromes = { "Initializer" };
-
-            AskForInputContinuously(comparisonNumbers, ref palindromes);
-            DisplayAllPalindromes(palindromes);
-        }
-
-        static void AskForInputContinuously(char[] comparisonNumbers, ref string[] palindromes)
-        {
             string userInput;
 
             do
@@ -43,12 +36,17 @@ namespace Palindrome
                     if (IsPalindrome(userInput))
                     {
                         AddInputToArray(ref palindromes, userInput);
-                        DisplayKindOfPalindrome(userInput, comparisonNumbers);
+                        if (IsNumberPalindrome(comparisonNumbers, userInput))
+                            Console.WriteLine("This is a number palindrome.");
+                        else
+                            Console.WriteLine("This is a character palindrome.");
                     }
                     else
                         Console.WriteLine("This is not a palindrome.");
                 }
             } while (userInput.ToUpper() != "END");
+
+            DisplayAllPalindromes(palindromes);
         }
 
         static bool IsPalindrome(string characters)
@@ -68,16 +66,8 @@ namespace Palindrome
 
         static void AddInputToArray(ref string[] palindromes, string userInput)
         {
-            Array.Resize(ref palindromes, palindromes.Length + 1);
+            Array.Resize(ref palindromes, palindromes.Length + 1); // change this
             palindromes[palindromes.Length - 1] = userInput;
-        }
-
-        static void DisplayKindOfPalindrome(string userInput, char[] comparisonNumbers)
-        {
-            if (IsNumberPalindrome(comparisonNumbers, userInput))
-                Console.WriteLine("This is a number palindrome.");
-            else
-                Console.WriteLine("This is a character palindrome.");
         }
 
         static bool IsNumberPalindrome(char[] comparisonNumbers, string characters)
