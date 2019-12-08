@@ -10,17 +10,18 @@ namespace ChloeB_301062067_A6
     {
         static void Main(string[] args)
         {
-            // Chloe Baker - 301062067
+            // Chloe Baker - 301062067 - December 8, 2019
 
-            /* Write a method named IsPerfect that ask user for an integer number
-             * and display if the number is perfect. A number is perfect if it 
-             * equals the sum of all the smaller positive integers that divide 
-             * evenly into it. For example, 6 is perfect because 1, 2, and 3 
-             * divide evenly into it and their sum is 6. Write method GetNumber 
-             * that will keep asking user to input an integer number until valid 
-             * number is provided. This method will return provided value. In the 
-             * Main method of the console application call GetNumber method to 
-             * get the user input. By calling IsPerfect method in main check if 
+            /* Write a method named IsPerfect that ask user for an integer
+             * number and display if the number is perfect. A number is 
+             * perfect if it equals the sum of all the smaller positive 
+             * integers that divide evenly into it. For example, 6 is 
+             * perfect because 1, 2, and 3 divide evenly into it and their
+             * sum is 6. Write method GetNumber that will keep asking user
+             * to input an integer number until valid number is provided. 
+             * This method will return provided value. In the Main method 
+             * of the console application call GetNumber method to get the
+             * user input. By calling IsPerfect method in main check if 
              * the number is perfect. Display the result. */
 
             IsPerfect(GetNumber());
@@ -30,10 +31,10 @@ namespace ChloeB_301062067_A6
         {
             int sum = 1; // 1 is always a proper factor
 
-            for (int x = 2; x < integer; ++x)
+            for (int factor = 2; factor < integer; ++factor)
             {
-                if (integer % x == 0) // if x is a proper factor
-                    sum += x;
+                if (integer % factor == 0) // if factor is a proper factor
+                    sum += factor;
             }
             
             if (sum == integer)
@@ -44,13 +45,11 @@ namespace ChloeB_301062067_A6
 
         static int GetNumber()
         {
-            int integer;
+            int integer = 0;
 
-            do
-            {
-                Console.Write("Enter an integer: ");
-                integer = Convert.ToInt32(Console.ReadLine());
-            } while (); // what is a valid input?
+            Console.Write("Enter an integer: ");
+            while (!int.TryParse(Console.ReadLine(), out integer))
+                Console.Write("Invalid. Please enter an integer: ");
 
             return integer;
         }

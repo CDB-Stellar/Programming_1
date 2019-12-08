@@ -24,7 +24,7 @@ namespace LAB12_04._5
             double cosineOfAngle = 0f;
 
             AngleSineCosine(0.500, ref sineOfAngle, ref cosineOfAngle);
-            Console.WriteLine($"{0.500}, {sineOfAngle}, {cosineOfAngle}");
+            Console.WriteLine($"{0.500}, {sineOfAngle:f3}, {cosineOfAngle}");
             AngleSineCosine(0.501, ref sineOfAngle, ref cosineOfAngle);
             Console.WriteLine($"{0.501}, {sineOfAngle}, {cosineOfAngle}");
             AngleSineCosine(0.502, ref sineOfAngle, ref cosineOfAngle);
@@ -47,7 +47,8 @@ namespace LAB12_04._5
 
         static void AngleSineCosine(double angle, ref double sineOfAngle, ref double cosineOfAngle)
         {
-
+            sineOfAngle = Math.Sin(angle);
+            cosineOfAngle = Math.Cos(angle);
         }
     }
 }
